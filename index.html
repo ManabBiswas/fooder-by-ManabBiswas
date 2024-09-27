@@ -21,22 +21,25 @@
                 
                 </li>
                 <li class="navItems" id="searchbar">
-                    Search</li>
-                <li class="navItems" id="user">
+                    <form action="/search" method="GET">
+                        <input type="search" id="search" name="q" placeholder="Search here...">
+                        <button type="submit">🔍</button>
+                    </form>    
+                <li class="navItems right"  id="user">
                     <img src="user.png" alt="user icon" width="auto">
                     user</li>
-                <li class="navItems" id="cart">
+                <li class="navItems right"  id="cart">
                     <img src="shoping.png" alt="user icon" width="auto">
                     Cart</li>
-                <li class="navItems" id="help">contact Us</li>
-                <li class="navItems" id="qr"><img src="Qr.png" alt="" width="auto">QR Code</li>
+                <li class="navItems right"  id="help">contact Us</li>
+                <li class="navItems right"  id="qr"><img src="Qr.png" alt="" width="auto">QR Code</li>
             </ol>
             <div class="menuIcon" id="menuIcon">
                 <ol>
     
-                    <li class="category" id=" ">Category</li>
+                    <li class="category" id="">Category</li>
                     <hr>
-                    <li class="menuitems" id=" ">Food1</li>
+                    <li class="menuitems" id="food1">Food1</li>
                     <li class="menuitems" id="">Food2</li>
                     <li class="menuitems" id="">Food3</li>
                     <li class="menuitems" id="">Food4</li>
@@ -45,22 +48,31 @@
             </div>
         </nav>
         <main>
-    <div>
-        <img src="Fooder logo.png" alt="" width="689px">
+<div class="foodCard" id="food1">
+    <div class="cardContainer">
+        <div class="imageBox">
+            <img src="fooder.png" alt="Food image" class="foodImage" >
+        </div>
+        <div class="cardHeading"><h4>Food Name</h4></div>
+        <div class="aboutFood">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aut deleniti repudiandae obcaecati maiores repellat.</p>
+        </div>
     </div>
-    <div>
-        <img src="Fooder logo.png" alt="" width="689px">
-    </div>
-    <div>
-        <img src="Fooder logo.png" alt="" width="689px">
-    </div>
-    <div>
-        <img src="Fooder logo.png" alt="" width="689px">
-    </div>
-    <div>
-        <img src="Fooder logo.png" alt="" width="689px">
-    </div>
+
     
+    <div class="cardContainer">
+        <div class="imageBox">
+            <img src="fooder.png" alt="Food image" class="foodImage" >
+        </div>
+        <div class="cardHeading"><h4>Food Name</h4></div>
+        <div class="aboutFood">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aut deleniti repudiandae obcaecati maiores repellat.</p>
+        </div>
+    </div>
+
+    
+</div>
+    <hr>
         </main>
     <footer>
     

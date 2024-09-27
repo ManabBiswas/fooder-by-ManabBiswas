@@ -26,8 +26,8 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
     z-index: 2;
     font: 1.4em sans-serif;
     position: sticky;
@@ -35,11 +35,20 @@ body {
     background-color: #f3efef;
     cursor: pointer;
 }
+
 .navItems {
     padding: 7px 5px;
-    margin: 3px 0;
+    margin: 0 10px; 
     border-radius: 25px;
 }
+
+.navItems img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    filter: brightness(120%), contrast(120%);
+}
+
 a {
     text-decoration: none;
 }
@@ -57,6 +66,32 @@ a {
     transition: 0.7s;
     transform: translateX(-100%);
     display: none; 
+}
+#menu {
+    margin-right: auto;
+}
+
+#searchbar form {
+    display: flex;
+    align-items: center;
+    
+}
+
+#searchbar input[type="search"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 120%;
+}
+
+#searchbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 5px;
 }
 .menuitems {
     display: flex;
@@ -90,6 +125,57 @@ li button{
     font-weight: bold;
     font-size: larger;
     color: rgb(255, 196, 0);
+}
+.foodCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10%;
+}
+
+.cardContainer {
+    margin: 15px;
+    height: auto; 
+    width: 100%; 
+    border: 1px solid salmon;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px 0px 13px cadetblue;
+    
+}
+.imageBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.foodimage {
+    width: 100%; /* Ensure image takes full width of container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 1px solid #013b52;
+    border-radius: 5%;
+}
+
+.cardHeading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.aboutFood p {
+    text-align: center;
+    border: 1px solid #ccdea1;
+    padding: 10px;
+    /* display: none; */
+    opacity: 0;
+}
+.aboutFood p:hover {
+    opacity: 1;
 }
 @media (max-width: 720px) {
     .navbar {
